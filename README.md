@@ -55,35 +55,35 @@
   
  ##### LED(黄色)を点灯させる
   
- `$ echo 1 > /dev/myled0;`
+   `$ echo 1 > /dev/myled0;`
   
 #####  LED(青)を点灯させる
   
- `$ echo 2 > /dev/myled0;`
+   `$ echo 2 > /dev/myled0;`
   
 #####  LED(赤)を点灯させる
   
- `$ echo 3 > /dev/myled0;`
+   `$ echo 3 > /dev/myled0;`
   
 #####  ブザーを鳴らす
   
-  `$ echo 4 > dev/myled0;`
+    `$ echo 4 > dev/myled0;`
   
 #####  すべてのLEDを同時に点滅させる
   
- `$ echo 5 > dev/myled0;`
+   `$ echo 5 > dev/myled0;`
   
 #####  すべてのLEDをばらばらに点滅させる
   
-  `$ echo 6 > dev/myled0;`
+    `$ echo 6 > dev/myled0;`
   
 #####  警告を鳴らす
   
-  `$ echo 7 > dev/myled0;`
+    `$ echo 7 > dev/myled0;`
   
 #####  すべての動作をやめさせる
   
-  `$ echo 0 > dev/myled0;`
+    `$ echo 0 > dev/myled0;`
   
  # デモ動画
  
