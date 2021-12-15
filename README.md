@@ -55,11 +55,11 @@
   
  ##### LED(黄色)を点灯させる
   
- ' $ echo 1 > /dev/myled0'
+ '$ echo 1 > /dev/myled0;'
   
 #####  LED(青)を点灯させる
   
- ' $ echo 2 > /dev/myled0'
+ '$ echo 2 > /dev/myled0;'
   
 #####  LED(赤)を点灯させる
   
