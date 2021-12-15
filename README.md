@@ -35,7 +35,7 @@
   
    $ git clone git@github.com:Koukip/kadai1.git
    
-   $ cd kadai1
+   $ cd myled
    
    $ make
    
