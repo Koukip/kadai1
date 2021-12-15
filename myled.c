@@ -1,3 +1,6 @@
+//SPDX-License-Identifer: GPL-3.0
+// *Copyright (c) 2021 Kouki Uchida & Ryuichi Ueda & Itsuki Ueno. All right reserved.
+
 #include <linux/module.h>
 #include <linux/fs.h>
 #include <linux/cdev.h>
