@@ -1,16 +1,16 @@
-# LED_Device_Driver
+## LED_Device_Driver
 
 2021年度のロボットシステム学の課題1で作成して改良を加えたデバイスドライバです。
 
 実行することによってLEDにいろいろな光り方をさせたりブザーを鳴らしたりすることができます。
 
-# 動作環境
+## 動作環境
 
 ・Raspberry Pi 3 Model B
  
   ・OS:ubuntu 20.04 server
   
-# 使用したもの
+## 使用したもの
 
   ・Raspberry Pi 3 Model B × 1
  
@@ -24,12 +24,12 @@
   
   ・ジャンパー線 (オス-メス) × 8
  
-# 回路
+## 回路
 
 ・配線画像
   ![image](https://user-images.githubusercontent.com/93635163/146193856-701b8f7e-5bda-4630-a57e-6fdadeaed780.png)
   
- # 使用方法
+ ## 使用方法
  
   #### [インストール]
   
@@ -87,9 +87,9 @@
   
    `$ echo 0 > dev/myled0;`
   
- # デモ動画
+ ## デモ動画
  
  
- # ライセンス
+ ## ライセンス
  
 
