@@ -33,15 +33,15 @@
   
   以下のコマンドを実行してください。
   
-   $ git clone git@github.com:Koukip/kadai1.git
+       $ git clone git@github.com:Koukip/kadai1.git
    
-   $ cd myled
+       $ cd myled
    
-   $ make
+       $ make
    
-   $ sudo insmod myled.ko
+       $ sudo insmod myled.ko
    
-   $ sudo chmod 666 /dev/myled0
+       $ sudo chmod 666 /dev/myled0
    
  #### [アンインストール」
   
