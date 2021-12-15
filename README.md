@@ -94,6 +94,8 @@
 
  ## ライセンス
  
+ GNU General Public License v3.0
+ 
  https://github.com/Koukip/kadai1/blob/ce6aaf1d59c2121a03dd7edbf3b952bee4f549ae/COPYING
  
  
