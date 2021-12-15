@@ -67,7 +67,7 @@
   
 #####  ブザーを鳴らす
   
-    `$ echo 4 > dev/myled0;`
+   `$ echo 4 > dev/myled0;`
   
 #####  すべてのLEDを同時に点滅させる
   
@@ -75,15 +75,15 @@
   
 #####  すべてのLEDをばらばらに点滅させる
   
-    `$ echo 6 > dev/myled0;`
+   `$ echo 6 > dev/myled0;`
   
 #####  警告を鳴らす
   
-    `$ echo 7 > dev/myled0;`
+   `$ echo 7 > dev/myled0;`
   
 #####  すべての動作をやめさせる
   
-    `$ echo 0 > dev/myled0;`
+   `$ echo 0 > dev/myled0;`
   
  # デモ動画
  
