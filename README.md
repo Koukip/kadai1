@@ -20,5 +20,13 @@
   ・ジャンパー線 (オス-メス) × 8
  
 # 回路
+
+・配線画像
   ![image](https://user-images.githubusercontent.com/93635163/146193856-701b8f7e-5bda-4630-a57e-6fdadeaed780.png)
+  
+ # 使用方法
+ 
+ # [インストール]
+  以下のコマンドを実行してください。
+ 
 
