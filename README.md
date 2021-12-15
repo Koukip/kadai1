@@ -28,6 +28,10 @@
  
   [インストール]
   以下のコマンドを実行してください。
-   $ git clone 
+   $ git clone git@github.com:Koukip/kadai1.git
+   $ cd kadai1
+   $ make
+   $ sudo insmod myled.ko
+   $ sudo chmod 666 /dev/myled0
  
 
