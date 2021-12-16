@@ -26,6 +26,11 @@
  
 ## 回路
 
+・回路図
+
+<img width="430" alt="image" src="https://user-images.githubusercontent.com/93635163/146329865-40e55445-5514-4200-91a0-0d1b4636df6e.png">
+
+
 ・配線画像
   ![image](https://user-images.githubusercontent.com/93635163/146193856-701b8f7e-5bda-4630-a57e-6fdadeaed780.png)
   
