@@ -43,6 +43,8 @@
 
 GNU General Public License v3.0
 
+https://github.com/Koukip/kadai1/blob/d3d1b389083927ab58c5ac654e8849d254e2a992/COPYING
+
 
 
 
