@@ -4,6 +4,8 @@
 
 ## Demo video
 
+https://youtu.be/P9XVgc-9a9A
+
 ## circuit
 
 #### circuit diagram
