@@ -1,3 +1,8 @@
+//SPDX-License-Identifer: GPL-3.0
+// *Copyright (c) 2021 Kouki Uchida & Ryuichi Ueda. All right reserved.
+
+
+
 #include <linux/module.h>
 #include <linux/fs.h>
 #include <linux/cdev.h>
@@ -6,7 +11,7 @@
 #include <linux/io.h>
 #include <linux/delay.h>
 
-MODULE_AUTHOR("Kouki Uchida");
+MODULE_AUTHOR("Kouki Uchida & Ryuichi Ueda");
 MODULE_DESCRIPTION("driver for LED control");
 MODULE_LICENSE("GPL");
 MODULE_VERSION("0.0.1");
@@ -16,7 +21,6 @@ static struct cdev cdv;
 static struct class *cls = NULL;
 static volatile u32 *gpio_base = NULL;
 
-static int led_gpio[3] = {23, 24, 25};
 
 static ssize_t led_write(struct file* flip, const char* buf, size_t count, loff_t* pos)
 {
@@ -31,62 +35,22 @@ static ssize_t led_write(struct file* flip, const char* buf, size_t count, loff_
 		gpio_base[10] = 1 << 25;
 		gpio_base[10] = 1 << 24;
 		gpio_base[10] = 1 << 23;
-		gpio_base[10] = 1 << 14;
 	}else if(c == '1'){
 		gpio_base[7] = 1 << 25;
 		gpio_base[10] = 1 << 24;
 		gpio_base[10] = 1 << 23;
-		gpio_base[10] = 1 << 14;
 	}else if(c == '2'){
 		gpio_base[10] = 1 << 25;
 		gpio_base[7] = 1 << 24;
 		gpio_base[10] = 1 << 23;
-		gpio_base[10] = 1 << 14;
 	}else if(c == '3'){
 		gpio_base[10] = 1 << 25;
 		gpio_base[10] = 1 << 24;
 		gpio_base[7] = 1 << 23;
-		gpio_base[10] = 1 << 14;
 	}else if(c == '4'){
-		gpio_base[10] = 1 << 25;
-		gpio_base[10] = 1 << 24;
-		gpio_base[10] = 1 << 23;
-		gpio_base[7] = 1 << 14;
-	}else if(c == '5'){
-		for(n = 0; n < 10; n++){
-			gpio_base[7] = 1 << 23;
-			gpio_base[7] = 1 << 14;
-			__delay(5 * 1000 * 1000);
-			gpio_base[10] = 1 << 23;
-			gpio_base[10] = 1 << 14;
-			__delay(5 * 1000 * 1000);
-		}
-	}else if(c == '6'){
-		for(n = 0; n < 10; n++){
-			gpio_base[7] = 1 << 23;
-			gpio_base[7] = 1 << 25;
-			gpio_base[7] = 1 << 24;
-			__delay(5 * 1000 * 1000);
-			gpio_base[10] = 1 << 23;
-			gpio_base[10] = 1 << 25;
-			gpio_base[10] = 1 << 24;
-			__delay(5 * 1000 * 1000);
-		}
-	}else if(c == '7'){
-		for(n = 0; n < 10; n++){
-			gpio_base[7] = 1 << 23;
-			__delay(6 * 1000 * 1000);
-			gpio_base[7] = 1 << 25;
-			__delay(4 * 1000 * 1000);
-			gpio_base[7] = 1 << 24;
-			__delay(5 * 1000 * 1000);
-			gpio_base[10] = 1 << 23;
-			__delay(4 * 1000 * 1000);
-			gpio_base[10] = 1 << 25;
-			__delay(5 * 1000 * 1000);
-			gpio_base[10] = 1 << 24;
-			__delay(6 * 1000 * 1000);
-		}
+		gpio_base[7] = 1 << 25;
+		gpio_base[7] = 1 << 24;
+		gpio_base[7] = 1 << 23;
 	}
 
  
@@ -157,12 +121,6 @@ static int __init init_mod(void)
 	const u32 shift3 = (led3%10)*3;
 	const u32 mask3 = ~(0x7 << shift3);
 	gpio_base[index3] = (gpio_base[index3] & mask3) | (0x1 << shift3);
-
-	const u32 led4 = 14;
-	const u32 index4 = led4/10;
-	const u32 shift4 = (led4%10)*3;
-	const u32 mask4 = ~(0x7 << shift4);
-	gpio_base[index4] = (gpio_base[index4] & mask4) | (0x1 << shift4);
 
 	 return 0;
 
