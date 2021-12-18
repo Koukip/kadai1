@@ -4,7 +4,12 @@
 
 ## Demo video
 
-## circuit diagram
+## circuit
+
+#### circuit diagram
+
+<img width="537" alt="image" src="https://user-images.githubusercontent.com/93635163/146634878-c7e725a5-cbb8-4ada-a18c-b00f0ee15705.png">
+
 
 #### Pin information
 
