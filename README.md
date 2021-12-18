@@ -1,6 +1,12 @@
 ## Robot Systems Studies Issue 1
 
+授業で作成したデバイスドライバに簡単な改良を加えました。
+
 ## Demo video
+
+## circuit diagram
+
+
 
 ## How to use
 
