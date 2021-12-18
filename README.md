@@ -39,6 +39,11 @@
 5.  $ echo 0 > /dev/myled0    →　すべてのLEDを消灯する。
 
 
+#### License
+
+GNU General Public License v3.0
+
+
 
 
  
