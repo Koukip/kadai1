@@ -1,11 +1,5 @@
 //SPDX-License-Identifer: GPL-3.0
-<<<<<<< HEAD
 // *Copyright (c) 2021 Kouki Uchida & Ryuichi Ueda. All right reserved.
-
-
-=======
-// *Copyright (c) 2021 Kouki Uchida & Ryuichi Ueda & Itsuki Ueno. All right reserved.
->>>>>>> 6b3825bdd035d934b772869829b2eaabedec8ce1
 
 #include <linux/module.h>
 #include <linux/fs.h>
@@ -15,11 +9,8 @@
 #include <linux/io.h>
 #include <linux/delay.h>
 
-<<<<<<< HEAD
+
 MODULE_AUTHOR("Kouki Uchida & Ryuichi Ueda");
-=======
-MODULE_AUTHOR("Kouki Uchida & Ryuichi Ueda & itukiueno");
->>>>>>> 6b3825bdd035d934b772869829b2eaabedec8ce1
 MODULE_DESCRIPTION("driver for LED control");
 MODULE_LICENSE("GPL");
 MODULE_VERSION("0.0.1");
