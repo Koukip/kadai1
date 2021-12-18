@@ -6,6 +6,11 @@
 
 ## circuit diagram
 
+#### Pin information
+
+<img width="445" alt="image" src="https://user-images.githubusercontent.com/93635163/146634724-6ab11f8a-d45d-4fd2-a36d-2ab32e63be78.png">
+
+
 
 
 ## How to use
