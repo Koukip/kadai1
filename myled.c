@@ -1,11 +1,5 @@
 //SPDX-License-Identifer: GPL-3.0
-<<<<<<< HEAD
 // *Copyright (c) 2021 Kouki Uchida & Ryuichi Ueda. All right reserved.
-
-
-=======
-// *Copyright (c) 2021 Kouki Uchida & Ryuichi Ueda & Itsuki Ueno. All right reserved.
->>>>>>> 6b3825bdd035d934b772869829b2eaabedec8ce1
 
 #include <linux/module.h>
 #include <linux/fs.h>
@@ -15,11 +9,8 @@
 #include <linux/io.h>
 #include <linux/delay.h>
 
-<<<<<<< HEAD
+
 MODULE_AUTHOR("Kouki Uchida & Ryuichi Ueda");
-=======
-MODULE_AUTHOR("Kouki Uchida & Ryuichi Ueda & itukiueno");
->>>>>>> 6b3825bdd035d934b772869829b2eaabedec8ce1
 MODULE_DESCRIPTION("driver for LED control");
 MODULE_LICENSE("GPL");
 MODULE_VERSION("0.0.1");
@@ -33,7 +24,7 @@ static volatile u32 *gpio_base = NULL;
 static ssize_t led_write(struct file* flip, const char* buf, size_t count, loff_t* pos)
 {
 	char c;
-	int n;
+
 	if(copy_from_user(&c, buf, sizeof(char)))
                 return - EFAULT;		
 
@@ -112,23 +103,20 @@ static int __init init_mod(void)
 
 	gpio_base = ioremap_nocache(0x3f200000, 0xA0);
 
-	const u32 led1 = 25;
-	const u32 index1 = led1/10;
-	const u32 shift1 = (led1%10)*3;
-	const u32 mask1 = ~(0x7 << shift1);
-	gpio_base[index1] = (gpio_base[index1] & mask1) | (0x1 << shift1);
+	int n;
+	int i;
 
-	const u32 led2 = 24;
-	const u32 index2 = led2/10;
-	const u32 shift2 = (led2%10)*3;
-	const u32 mask2 = ~(0x7 << shift2);
-	gpio_base[index2] = (gpio_base[index2] & mask2) | (0x1 << shift2);
+	for(n = 23; n <= 25; n++){
+	for(i = 1; i <= 3; i++){	
+	       const u32 ledi = n;
+	       const u32 indexi = ledi/10;
+               const u32 shifti = (ledi%10)*3;
+               const u32 maski = ~(0x7 << shifti);
+               gpio_base[indexi] = (gpio_base[indexi] & maski) | (0x1 << shifti);
+	}
+	}	
 
-	const u32 led3 = 23;
-	const u32 index3 = led3/10;
-	const u32 shift3 = (led3%10)*3;
-	const u32 mask3 = ~(0x7 << shift3);
-	gpio_base[index3] = (gpio_base[index3] & mask3) | (0x1 << shift3);
+
 
 	 return 0;
 
